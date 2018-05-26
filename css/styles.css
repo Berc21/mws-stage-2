@@ -1,0 +1,190 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+/* RESET */
+* {
+    padding: 0;
+    margin: 0;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+html {
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 62.5%; /* it means 1rem 10px, very easy to calculate rem */ 
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #333;
+  background-color: #F3F3F3;
+  position:relative;
+}
+
+:focus {
+  outline: 0.2rem dotted #F44336;
+}
+
+ul, li {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.6rem;
+	color: #333;
+}
+a {
+	color: orange;
+	text-decoration: none;
+}
+a:hover, a:focus {
+	color: #3397db;
+	text-decoration: none;
+}
+a img{
+	border: none 0 #fff;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0 0 2rem;
+}
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+#maincontent {
+  background-color: #f3f3f3;
+  min-height: 100%;
+}
+
+/* ====================== Navigation ====================== */
+nav {
+  width: 100%;
+  height: 8rem;
+  background-color: #252831;
+  text-align:center;
+  display: flex;
+}
+nav h1 {
+  margin: auto;
+}
+nav h1 a {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 300;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+}
+#breadcrumb {
+    padding: 1rem 4rem 1.6rem;
+    list-style: none;
+    background-color: #eee;
+    font-size: 1.7rem;
+    margin: 0;
+    width: 50%;
+}
+
+/* Display list items side by side */
+#breadcrumb li {
+    display: inline;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+#breadcrumb li+li:before {
+    padding: 0.8rem;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+#breadcrumb li a {
+    color: #01579B;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+#breadcrumb li a:hover {
+    color: #009688;
+    text-decoration: underline;
+}
+/* ====================== Map ====================== */
+#map {
+  height: 40rem;
+  width: 100%;
+  background-color: #ccc;
+}
+
+
+#footer {
+  background-color: #444;
+  color: #fff;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  padding: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.gmnoprint:focus {
+  transform: scale(0.5, 0.5);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.skip-list{
+  left:-999px;
+  position:absolute;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow: hidden;
+  z-index:-999
+}
+.skip-list:active, .skip-list:focus {
+  color: black;
+  font-weight: bold;
+  display: inline-block;
+  background-color: #fff;
+  left:auto;
+  top:200px;
+  max-width:100%;
+  width: auto;
+  height:auto;
+  overflow:auto;
+  margin:10px 40%;
+  padding:15px;
+  border:4px solid #F44336;
+  text-align:center;
+  font-size:1.2em;
+  z-index:999
+}
+
+  
+.fade {
+  animation-name: fade;
+  animation-duration: 2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

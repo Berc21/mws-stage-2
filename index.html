@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#02ccba">
+    <link rel="manifest" href="/manifest.json">
+  <title>Restaurant Reviews</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+          
+
+<body>
+  <header>
+    <nav>
+      <h1><a href="/" id="home-page-link" aria-label="Home page link" >Restaurant Reviews</a></h1>
+    </nav>
+  </header>
+
+  <a class="skip-list" aria-label="skips to restaurant list" href="#restaurants-list">Skip to Restaurant Lists</a>
+<a class="skip-list" aria-label="starts from map" href="#maincontent">Start From Map</a>
+
+
+  <main id="maincontent">
+    <section id="map-container" role="application" >
+      <div id="map" ></div>
+    </section>
+    <section>
+      <div class="filter-options">
+        <h2>Filter Results</h2>
+        <label  class="filter-label" for="neighborhoods-select">
+        <select  aria-label="Select neighborhoods"  id="neighborhoods-select" name="neighborhoods">
+          <option value="all">All Neighborhoods</option>
+        </select></label>
+        <label class="filter-label" for="cuisines-select">
+        <select  aria-label="Select Cuisines"   id="cuisines-select" name="cuisines">
+          <option value="all">All Cuisines</option></label>
+        </select>
+      </div>
+      <section id="restaurants-list-container">
+        <ul id="restaurants-list">
+        </ul>
+    </section>
+    </section>
+  </main>
+
+
+
+
+  <footer id="footer">
+    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+  </footer>
+
+
+
+
+  <link rel="stylesheet" href="css/restaurant-listing.css">
+  <link rel="stylesheet" href="css/mobile.css">
+
+
+
+
+<script defer src="dist/homepage.js"></script>
+
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOFR4EChDaE3A1YLP7UK48bh7Buddgr9Y&callback=initMap"
+type="text/javascript"></script>
+
+</body>
+
+</html>
